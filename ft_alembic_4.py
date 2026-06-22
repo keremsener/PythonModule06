@@ -1,3 +1,15 @@
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_4.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:01:03 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:09:13 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
 import alchemy
 
 if __name__ == "__main__":
@@ -5,7 +17,4 @@ if __name__ == "__main__":
     print("Accessing the alchemy module using 'import alchemy'")
 
     print("Testing create_air:", alchemy.create_air())
-    try:
-        print("Testing the hidden create_earth:", alchemy.create_earth())
-    except AttributeError as e:
-        print(e)
+    print("Testing the hidden create_earth:", alchemy.create_earth())
