@@ -1,0 +1,262 @@
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  elements.py                                       :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:00:37 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:00:41 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+def create_fire() -> str:
+    return "Fire element created"
+
+
+def create_water() -> str:
+    return "Water element created"
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_0.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:00:43 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:00:46 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import elements
+
+if __name__ == "__main__":
+    print("=== Alembic 0===")
+    print("Using: 'import ...' structure to access elements.py")
+    print("Testing create_fire:", elements.create_fire())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_1.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:00:49 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:00:51 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+from elements import create_water
+
+if __name__ == "__main__":
+    print("=== Alembic 1 ===")
+    print("Using: 'from ... import ...' structure to access elements.py")
+    print("Testing create_water:", create_water())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_2.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:00:53 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:00:56 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy.elements
+
+if __name__ == "__main__":
+    elements = alchemy.elements
+    print("=== Alembic 2 ===")
+    print("Accessing alchemy/elements.py using 'import ...' structure")
+    print("Testing create_earth:", elements.create_earth())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_3.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:00:57 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:01:01 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+from alchemy.elements import create_air
+
+if __name__ == "__main__":
+    print("=== Alembic 3 ===")
+    print("Accessing alchemy/elements.py using 'from ... import ...'\
+ structure")
+    print("Testing create_air:", create_air())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_4.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:01:03 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:09:13 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy
+
+if __name__ == "__main__":
+    print("=== Alembic 4 ===")
+    print("Accessing the alchemy module using 'import alchemy'")
+
+    print("Testing create_air:", alchemy.create_air())
+    print("Testing the hidden create_earth:", alchemy.create_earth())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_alembic_5.py                                   :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:01:45 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:01:48 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+from alchemy import create_air
+
+if __name__ == "__main__":
+    print("=== Alembic 5 ===")
+    print("Accessing the alchemy module using 'from alchemy import ...'")
+    print("Testing create_air:", create_air())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_distillation_0.py                              :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:03:31 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:03:34 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+from alchemy.potions import strength_potion, healing_potion
+
+if __name__ == "__main__":
+    print("=== Distillation 0 ===")
+    print("Direct access to alchemy/potions.py")
+    print("Testing strength_potion:", strength_potion())
+    print("Testing healing_potion:", healing_potion())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_distillation_1.py                              :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:03:38 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:04:33 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy
+
+if __name__ == "__main__":
+    print("=== Distillation 1 ===")
+    print("Using: 'import alchemy' structure to access potions")
+    print("Testing strength_potion:", alchemy.strength_potion())
+    print("Testing heal alias:", alchemy.heal())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_kaboom_0.py                                    :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:07:13 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:14:15 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy.grimoire.light_spellbook as light_spellbook
+
+if __name__ == "__main__":
+    text = "Earth, wind and fire"
+    print("=== Kaboom 0 ===")
+    print("Using grimoire module directly")
+    print("Testing record light spell:",
+          light_spellbook.light_spell_record("Fantasy", text))
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_kaboom_1.py                                    :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 11:45:12 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:11:25 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+print("=== Kaboom 1 ===")
+print("Access to alchemy/grimoire/dark_spellbook.py directly")
+print("Test import now THIS WILL RAISE AN UNCAUGHT EXCEPTION")
+
+from alchemy.grimoire.dark_spellbook import dark_spell_record
+
+if __name__ == "__main__":
+    dark_spell_record("Necromancy", "bats and arsenic")
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_transmutation_0.py                             :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:07:25 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:07:28 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy.transmutation.recipes
+
+if __name__ == "__main__":
+    path = alchemy.transmutation.recipes
+    print(path.lead_to_gold())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_transmutation_1.py                             :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:07:32 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:14:29 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy.transmutation
+
+if __name__ == "__main__":
+    print("=== Transmutation 1 ===")
+    path = alchemy.transmutation
+    print("Import transmutation module directly")
+    print("Testing lead to gold:", path.lead_to_gold())
+# ************************************************************************* #
+#                                                                           #
+#                                                      :::      ::::::::    #
+#  ft_transmutation_2.py                             :+:      :+:    :+:    #
+#                                                  +:+ +:+         +:+      #
+#  By: ksener <ksener@student.42kocaeli.com.tr   +#+  +:+       +#+         #
+#                                              +#+#+#+#+#+   +#+            #
+#  Created: 2026/06/22 12:07:40 by ksener          #+#    #+#               #
+#  Updated: 2026/06/22 12:07:44 by ksener          ###   ########.fr        #
+#                                                                           #
+# ************************************************************************* #
+
+import alchemy
+
+if __name__ == "__main__":
+    print("=== Transmutation 2 ===")
+    print("Import alchemy module only")
+    print("Testing lead to gold:", alchemy.lead_to_gold())
